@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 600px;
+    height: 460px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.header {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.header__Sinhnhat {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.3em;
+    color: #666;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #f7e373;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: filter 0.3s ease; /* Transition for the filter effect */
+}
+
+.card {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0);
+    max-width: 300px; /* Chiều rộng */
+    height: 280px; /* Chiều cao */
+    background: rgba(255, 255, 255, 0.9); /* Màu nền ban đầu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: transform 0.5s ease;
+    background-image: url(https://intoroigiare.vn/wp-content/uploads/2023/11/background-powerpoint-dep.jpg);
+}
+
+.card.show {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.card p {
+    font-size: 0.8em;
+    color: #515151;
+    margin-top: 0;
+    font-weight: 600;
+}
+h2 {
+    color: rgb(172, 0, 172);
+}
+
+.card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #c82333;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+    backdrop-filter: blur(5px); /* Apply blur to the overlay */
+    z-index: 99; /* Ensure it's above everything except the card */
+    display: none; /* Initially hidden */
+}
+
+#showCardBtn:hover {
+    background-color: rgb(250, 215, 77);
+    opacity: 0.6;
+}
